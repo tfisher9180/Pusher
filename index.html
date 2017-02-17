@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    	<title>Pusher</title>
+
+    	<link rel="stylesheet" href="./vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./vendor/fortawesome/font-awesome/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+		<link rel="stylesheet" href="./css/main.css">
+
+	</head>
+
+	<body data-spy="scroll" data-target="#sticky-menu" data-offset="150">
+
+		<header id="header">
+			<div class="valign-wrapper">
+				<div class="valign">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="header-text text-center">
+							<div class="brand">
+								<img src="./img/pusher-logo.svg" />
+							</div>
+							<h4 class="artist-intro">EDM and Future Bass Producer</h4>
+							<a href="#bio" class="btn btn-primary smoothscroll">LEARN MORE</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="menu">
+			<nav id="sticky-menu" class="menu">
+				<ul class="nav navbar-nav text-center desktop-menu">
+					<li class="active">
+						<a href="#header" class="smoothscroll">HOME</a>
+					</li>
+					<li>
+						<a href="#music" class="smoothscroll">MUSIC</a>
+					</li>
+					<li>
+						<a href="#events" class="smoothscroll">EVENTS</a>
+					</li>
+					<li>
+						<a href="#bio" class="smoothscroll">BIO</a>
+					</li>
+					<li>
+						<a href="#booking" class="smoothscroll">BOOKING</a>
+					</li>
+				</ul>
+				<ul id="slide-out" class="mobile-menu side-nav">
+					<li>
+						<a href="#header" class="smoothscroll">HOME</a>
+					</li>
+					<li>
+						<a href="#music" class="smoothscroll">MUSIC</a>
+					</li>
+					<li>
+						<a href="#events" class="smoothscroll">EVENTS</a>
+					</li>
+					<li>
+						<a href="#bio" class="smoothscroll">BIO</a>
+					</li>
+					<li>
+						<a href="#booking" class="smoothscroll">BOOKING</a>
+					</li>
+				</ul>
+				<a href="#" data-activates="slide-out" class="button-collapse">
+					<i class="fa fa-bars"></i>
+				</a>
+			</nav>
+		</div>
+
+		<section id="music" class="section">
+			<h2 class="section-title">MUSIC<i class="equalizer"></i></h2>
+			<div id="music-carousel" style="margin: 0 auto">
+				<div class="carousel">
+					
+						<div class="carousel-item">
+							<img src="./img/new-laces-album-cover.jpg" width="300" height="300" />
+							<h5>NEW LACES EP</h5>
+							<a href="#modal" class="modal-trigger" data-playlist="true" data-iframe="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/259430275&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
+								<i class="fa fa-headphones"></i>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<img src="./img/deadbeats-album-cover.jpg" width="300" height="300" />
+							<h5>MAYWEATHER FT. HECKZ</h5>
+							<a href="#modal" class="modal-trigger" data-iframe="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/307098634&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
+								<i class="fa fa-headphones"></i>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<img src="./img/serum-massive-presets-album-cover.jpg" width="300" height="300" />
+							<h5>SERUM & MASSIVE PRESETS</h5>
+							<a href="#modal" class="modal-trigger" data-iframe="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/272123352&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
+								<i class="fa fa-headphones"></i>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<img src="./img/too-future-guest-mix-album-cover.jpg" width="300" height="300" />
+							<h5>TOO FUTURE GUEST MIX</h5>
+							<a href="#modal" class="modal-trigger" data-iframe="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/305510279&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+								<i class="fa fa-headphones"></i>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<img src="./img/take-u-there-flip.jpg" width="300" height="300" />
+							<h5>JACK U - TAKE U THERE</h5>
+							<a href="#modal" class="modal-trigger" data-iframe="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/168600427&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+								<i class="fa fa-headphones"></i>
+							</a>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<div id="modal" class="modal bottom-sheet" style="width: 100%">
+			<div class="modal-content">
+				<iframe id="soundcloud-frame" width="100%" height="450" scrolling="no" frameborder="no" src=""></iframe>
+			</div>
+		</div>
+
+		<section id="events" class="section">
+			<h2 class="section-title">EVENTS<i class="equalizer"></i></h2>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 event-column">
+						<div class="event">
+							<a class="img-link">
+								<div class="img-background mardis-grad-world"></div>
+							</a>
+							<div class="event-info">
+								<p class="event-date">MARCH 10, 2017</p>
+								<p class="event-title">Mardis Grad World</p>
+								<p class="event-location">New Orleans, LA</p>
+							</div>
+							<a class="btn">Read More</a>
+						</div>
+					</div>
+					<div class="col-md-4 event-column">
+						<div class="event">
+							<a class="img-link">
+								<div class="img-background buku-festival"></div>
+							</a>
+							<div class="event-info">
+								<p class="event-date">MARCH 11, 2017</p>
+								<p class="event-title">Buku Festival</p>
+								<p class="event-location">New Orleans, LA</p>
+							</div>
+							<a class="btn">Read More</a>
+						</div>
+					</div>
+					<div class="col-md-4 event-column">
+						<div class="event">
+							<a class="img-link">
+								<div class="img-background beta-nightclub"></div>
+							</a>
+							<div class="event-info">
+								<p class="event-date">APRIL 06, 2017</p>
+								<p class="event-title">Beta Nightclub</p>
+								<p class="event-location">Denver, CO</p>
+							</div>
+							<a class="btn">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="bio" class="section">
+			<h2 class="section-title">BIO<i class="equalizer"></i></h2>
+			<div class="thin-container">
+				<div class="content-container">
+					<div class="content">
+						<h4>Style</h4>
+						Pusher is a Musician/Producer/DJ based in Toronto. His self-titled ‘Neon’ style mixes influences of Trap, Pop, 90s R&B, Jazz, and brings everything together under one cohesive energetic, colourful, and bass-driven style not quite like anything else on the current musical landscape.
+
+						<h4>Career</h4>
+						Pusher has rocked audiences live across North America and Asia and, since 2015, has shared the stage with top-rung acts like Diplo, Flume, The Chainsmokers, Zeds Dead, Flosstradamus, RL Grime, Keys N Krates, Alison Wonderland, Shawn Wasabi, and Cashmere Cat. Pusher also is well known as a music educator. Along with online tutorials he released a sample pack through Prime Loops in early 2015 that instantly soared to #1 most popular on their site and has consistently charted in the top 3 since.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="booking" class="section">
+			<div class="thin-container">
+				<div class="valign-wrapper">
+					<div class="valign">
+						<h2 class="section-title">BOOKING<i class="equalizer"></i></h2>
+						<div class="booking-form">
+							<ul class="tabs">
+								<li class="tab col-sm-6">
+									<h5>
+										<a href="#form">BOOKING FORM</a>
+									</h5>
+								</li>
+								<li class="tab col-sm-6">
+									<h5>
+										<a href="#contacts">CONTACTS</a>
+									</h5>
+								</li>
+							</ul>
+							<div id="form" class="row">
+								<form class="col-sm-12" method="POST" action="email_sender.php">
+									<h4 class="text-center">GET IN TOUCH!</h4>
+									<div class="row">
+										<div class="col-sm-6 input-field">
+											<input name="first_name" id="first_name" type="text">
+											<label for="first_name">First Name</label>
+										</div>
+										<div class="col-sm-6 input-field">
+											<input name="last_name" id="last_name" type="text">
+											<label for="last_name">Last Name</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12 input-field">
+											<input name="email" id="email" type="email">
+											<label for="email">Email</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12 input-field">
+											<textarea name="message" id="message" maxlength="300" class="materialize-textarea"></textarea>
+											<label for="message">Message</label>
+										</div>
+									</div>
+									<div class="input-field">
+										<input name="reason" type="checkbox" id="reason" value="1">
+										<label for="reason">This is a <span class="primary-color">booking</span> inquiry</label>
+									</div>
+									<div class="row">
+										<div class="col-sm-12 input-field">
+											<p class="submit-button">
+												<button class="btn btn-primary" type="submit" name="action">
+													<i class="fa fa-rocket"></i> &nbsp;Submit
+												</button>
+											</p>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div id="contacts" class="row">
+								<div class="col-sm-12">
+									<h4 class="text-center">MY CONTACTS</h4>
+									<p class="text-center">
+										<span class="square"><i class="fa fa-pencil"></i></span>
+										<span class="text">mmeyer@paradigmagency.com</span>
+									</p>
+									<p class="text-center">
+										<span class="square"><i class="fa fa-envelope"></i></span>
+										<span class="text">sarah@2plus2.net</span>
+									</p>
+									<p class="text-center">
+										<span class="square"><i class="fa fa-location-arrow"></i></span>
+										<span class="text">Toronto, Canada</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="footer">
+			<div class="header-text text-center">
+				<div class="brand">
+					<img src="./img/pusher-logo.svg" />
+				</div>
+				<h5>Copyright 2016. All Rights Reserved</h5>
+				<p class="social">
+					<a href="#">
+						<span class="fa-stack">
+							<i class="fa fa-circle-thin fa-stack-2x"></i>
+							<i class="fa fa-headphones fa-stack-1x"></i>
+						</span>
+					</a>
+					<a href="#">
+						<span class="fa-stack">
+							<i class="fa fa-circle-thin fa-stack-2x"></i>
+							<i class="fa fa-soundcloud fa-stack-1x"></i>
+						</span>
+					</a>
+					<a href="#">
+						<span class="fa-stack">
+							<i class="fa fa-circle-thin fa-stack-2x"></i>
+							<i class="fa fa-facebook fa-stack-1x"></i>
+						</span>
+					</a>
+					<a href="#">
+						<span class="fa-stack">
+							<i class="fa fa-circle-thin fa-stack-2x"></i>
+							<i class="fa fa-twitter fa-stack-1x"></i>
+						</span>
+					</a>
+					<a href="#">
+						<span class="fa-stack">
+							<i class="fa fa-circle-thin fa-stack-2x"></i>
+							<i class="fa fa-youtube fa-stack-1x"></i>
+						</span>
+					</a>
+				</p>
+			</div>
+		</footer>
+
+		<script>
+			(function(window){
+  				if(window.Package){
+   					 Materialize = {};
+ 				 } else {
+   					 window.Materialize = {};
+  				}
+			})(window);
+
+			Materialize.escapeHash = function(hash) {
+  				return hash.replace( /(:|\.|\[|\]|,|=)/g, "\\$1" );
+			};
+		</script>
+
+		<script src="./vendor/components/jquery/jquery.min.js"></script>
+		<script src="./vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="./js/jquery.sticky.js"></script>
+		<script src="./js/iOS-Orientationchange-Fix.js"></script>
+		<script src="./js/hammer.min.js"></script>
+		<script src="./js/jquery.hammer.js"></script>
+		<script src="./js/sideNav.js"></script>
+		<script src="./js/collapsible.js"></script>
+		<script src="./js/velocity.min.js"></script>
+		<script src="./js/carousel.js"></script>
+		<script src="./js/modal.js"></script>
+		<script src="./js/forms.js"></script>
+		<script src="./js/tabs.js"></script>
+		<script src="./js/main.js"></script>
+
+	</body>
