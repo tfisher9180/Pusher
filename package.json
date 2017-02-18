@@ -1,0 +1,12 @@
+ {
+	"name": "itspusher",
+	"version": "1.0.0",
+	"description": "Demo site for Pusher",
+	"dependencies": {
+		"bower": "0.6.x",
+		"harp": "*"
+	},
+	"scripts": {
+		"postinstall": "./node_modules/bower/bin/bower install"
+	}
+ }
