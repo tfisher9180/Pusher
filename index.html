@@ -8,7 +8,7 @@
     	<title>Pusher</title>
 
     	<link rel="stylesheet" href="./css/bootstrap.min.css">
-		<link rel="stylesheet" href="./vendor/fortawesome/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="./libs/fontawesome/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 		<link rel="stylesheet" href="./css/main.css">
 
@@ -206,7 +206,7 @@
 								</li>
 							</ul>
 							<div id="form" class="row">
-								<form class="col-sm-12" method="POST" action="email_sender.php">
+								<form class="col-sm-12" method="POST" action="https://formspree.io/timothy.fisher@riosalado.edu">
 									<h4 class="text-center">GET IN TOUCH!</h4>
 									<div class="row">
 										<div class="col-sm-6 input-field">
@@ -232,14 +232,14 @@
 									</div>
 									<div class="row">
 										<div class="input-field">
-											<input name="reason" type="checkbox" id="reason" value="1">
+											<input name="reason" type="checkbox" id="reason" value="booking">
 											<label for="reason">This is a <span class="primary-color">booking</span> inquiry</label>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-sm-12 input-field">
 											<p class="submit-button">
-												<button class="btn btn-primary" type="submit" name="action">
+												<button id="submit-form" class="btn btn-primary" type="submit" name="action">
 													<i class="fa fa-rocket"></i> &nbsp;Submit
 												</button>
 											</p>
@@ -311,6 +311,12 @@
 			</div>
 		</footer>
 
+		<div id="form-feedback-modal" class="modal">
+			<div class="modal-content">
+				<div id="feedback"></div>
+			</div>
+		</div>
+
 		<script>
 			(function(window){
   				if(window.Package){
@@ -325,7 +331,7 @@
 			};
 		</script>
 
-		<script src="./vendor/components/jquery/jquery.min.js"></script>
+		<script src="./libs/jquery/dist/jquery.min.js"></script>
 		<script src="./js/bootstrap.min.js"></script>
 		<script src="./js/jquery.sticky.js"></script>
 		<script src="./js/iOS-Orientationchange-Fix.js"></script>

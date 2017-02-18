@@ -1,0 +1,8 @@
+{
+  "name": "itspusher",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "latest",
+    "fontawesome": "latest"
+  }
+}

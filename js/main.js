@@ -153,4 +153,25 @@ $(document).ready(function() {
 	});
 
 
+
+	$('form').on('submit', function(e) {
+
+		var first_name = $('#first_name').val();
+		var last_name = $('#last_name').val();
+		var email = $('#email').val();
+		var message = $('#message').val();
+
+		if (first_name != '' && last_name != '' && email != '' && message != '') {
+			$(this).submit();
+			/*$('#feedback').html('Your message has been sent successfully! I\'ll get back to you ASAP!');
+			$('#form-feedback-modal').modal('open');*/
+		} else {
+			$('#feedback').html('Please fill in all of the fields!');
+			$('#form-feedback-modal').modal('open');
+			e.preventDefault();
+			return false;
+		}
+	});
+
+
 });
