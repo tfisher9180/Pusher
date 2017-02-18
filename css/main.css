@@ -101,6 +101,7 @@ a:active, a:hover {
 .btn:hover {
 	background-color: #2bbbad;
 	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  color: #fff;
 }
 .section-title {
 	text-align: center;
@@ -480,7 +481,7 @@ iframe {
 }
 
 .modal {
-  display: block!important;
+  display: none;
   position: fixed;
   left: 0;
   right: 0;
@@ -503,6 +504,8 @@ iframe {
 }
 .modal .modal-content {
   padding: 24px;
+  border: 0;
+  border-radius: 0;
 }
 .modal .modal-close {
   cursor: pointer;

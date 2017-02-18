@@ -2,7 +2,6 @@
     "name": "timothy.fisher/pusher",
     "require": {
         "phpmailer/phpmailer": "^5.2",
-        "twbs/bootstrap": "^3.3",
         "fortawesome/font-awesome": "^4.7",
         "components/jquery": "^3.1"
     }
