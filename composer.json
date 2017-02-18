@@ -1,8 +1,11 @@
 {
     "name": "timothy.fisher/pusher",
     "require": {
+    	"components/jquery": "^3.1",
         "phpmailer/phpmailer": "^5.2",
-        "fortawesome/font-awesome": "^4.7",
-        "components/jquery": "^3.1"
-    }
+        "fortawesome/font-awesome": "^4.7"
+    },
+    "require-dev": {
+    	"heroku/heroku-buildpack-php": "*"
+ 	 }
 }
