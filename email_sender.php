@@ -7,8 +7,8 @@
 
     	<title>Pusher</title>
 
-    	<link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.min.css">
-		<link rel="stylesheet" href="./libs/font-awesome/css/font-awesome.min.css">
+    	<link rel="stylesheet" href="./vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./vendor/fortawesome/font-awesome/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 		<link rel="stylesheet" href="./css/main.css">
 
@@ -17,10 +17,6 @@
 	<body>
 
 	<?php
-
-		require './vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
-
-		$mail = new PHPMailer;
 
 		if ($_POST) {
 
@@ -36,17 +32,37 @@
 				$to = 'timothy.fisher@riosalado.edu';
 				$subject = $booking ? 'Booking Inquiry: '.$full_name : 'General Inquiry: '.$full_name;
 
-				$body = "From: $full_name\n E-mail: $email\n Message:\n $message";
+				$body = "From: $full_name\nE-mail: $email\nMessage:\n\n$message";
 
-				if (mail($to, $subject, $body, $from)) {
-					$feedback = '<h2 class="section-title">MESSAGE SENT<i class="equalizer"></i></h2>
-							<h4>THANKS! I\'LL GET BACK TO YOU ASAP</h4>';
-				} else {
+				date_default_timezone_set('Etc/UTC');
+
+				require './vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+
+				$mail = new PHPMailer;
+
+				$mail->isSMTP();
+				$mail->SMTPDebug = 0;
+				$mail->Debugoutput = 'html';
+				$mail->Host = 'smtp.gmail.com';
+				$mail->Port = 587;
+				$mail->SMTPSecure = 'tls';
+				$mail->SMTPAuth = true;
+				$mail->Username = 'tfisher9180@gmail.com';
+				$mail->Password = 'Ilovekayleesimpson2';
+				$mail->setFrom('tfisher9180@gmail.com', 'Timothy Fisher');
+				$mail->addAddress($to, 'Pusher Official');
+				$mail->Subject = $subject;
+				$mail->Body = $body;
+
+				if (!$mail->send()) {
 					$feedback = '<h2 class="section-title">ERROR<i class="equalizer"></i></h2>
 							<h4>SOMETHING WENT WRONG, PLEASE TRY AGAIN</h4>';
+				} else {
+					$feedback = '<h2 class="section-title">MESSAGE SENT<i class="equalizer"></i></h2>
+							<h4>THANKS! I\'LL GET BACK TO YOU ASAP</h4>';
 				}
 			} else {
-				$feeback = '<h2 class="section-title">ERROR<i class="equalizer"></i></h2>
+				$feedback = '<h2 class="section-title">ERROR<i class="equalizer"></i></h2>
 							<h4>SOME FIELDS ARE MISSING, PLEASE CHECK THE DATA AND TRY AGAIN</h4>';
 			}
 
@@ -57,7 +73,7 @@
 
 	?>
 
-		<header id="header">
+		<header id="feedback-header" style="background-color: #212121;">
 			<div class="valign-wrapper">
 				<div class="valign">
 					<div class="col-md-6 col-md-offset-3">
@@ -69,18 +85,17 @@
 				</div>
 			</div>
 		</header>
-		
+
+		<script src="./vendor/components/jquery/jquery.min.js"></script>
+		<script src="./vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="./js/iOS-Orientationchange-Fix.js"></script>
+
 		<script>
 			$('#goBack').click(function(e) {
 				e.preventDefault();
 				window.history.back();
 			});
 		</script>
-
-		<script src="./libs/jquery/dist/jquery.min.js"></script>
-		<script src="./libs/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="./js/iOS-Orientationchange-Fix.js"></script>
-		<script src="./js/main.js"></script>
 
 	</body>
 </html>

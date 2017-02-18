@@ -198,7 +198,8 @@ iframe {
 	background-size: cover;
 	background-position: center center;
 }
-.feedback-header {
+#feedback-header {
+  height: 100vh;
   background-color: #212121;
 }
 .header-text {
