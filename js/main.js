@@ -151,6 +151,7 @@ $(document).ready(function() {
 	$('.close-audio-controls').click(function(e) {
 		e.preventDefault();
 		$('#minimized-controls').hide();
+		$('#modal').modal('close');
 		$('#soundcloud-frame').attr('src', '');
 	});
 
