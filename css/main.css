@@ -302,6 +302,12 @@ iframe {
 	padding-bottom: 70px;
   z-index: 14;
 }
+.audio-controls {
+  font-size: 1.5em;
+}
+.audio-controls i {
+  margin: 0 10px;
+}
 @media only screen and (max-width: 992px) {
   #music {
     background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.55)), url('../img/music-section-background.jpeg');

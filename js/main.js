@@ -121,7 +121,40 @@ $(document).ready(function() {
 		return true;
 	});
 
+	var iframeElement = 'soundcloud-frame';
+	var widget = SC.Widget(iframeElement);
+
 	$('.modal').modal();
+
+	$('.soundcloud-modal').modal({
+		complete: function() {
+			widget.pause();		
+			$('#minimized-controls').modal('open');
+			$('.modal-overlay').hide();
+		}
+	});
+
+	$('.toggle-play').click(function(e) {
+		e.preventDefault();
+		$(this).toggleClass('fa-play fa-pause');
+		widget.toggle();
+	});
+
+	$('.fa-previous').click(function(e) {
+		e.preventDefault();
+		widget.prev();
+	});
+	$('.fa-forward').click(function(e) {
+		e.preventDefault();
+		widget.next();
+	});
+	$('.close-audio-controls').click(function(e) {
+		e.preventDefault();
+		$('#minimized-controls').hide();
+		$('#soundcloud-frame').attr('src', '');
+	});
+
+
 
 	/** =============
 	* END SOUNDCLOUD IFRAME
